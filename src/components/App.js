@@ -32,11 +32,11 @@ export default class App extends Component {
           toast.error('Нету таких изображений');
         } else {
           if (prevState && prevState.searchImage === this.state.searchImage) {
-            this.setState({ gallery: [...prevState.gallery, ...hits], reqStatus: "resolved" });
-            window.scrollTo({
+            this.setState({ gallery: [...prevState.gallery, ...hits], reqStatus: "resolved" }, ()=>{window.scrollTo({
               top: document.documentElement.scrollHeight,
               behavior: 'smooth',
-            });
+            });} );
+            
           } else { this.setState({ gallery: hits, reqStatus: "resolved" }) };      
         }
       })
