@@ -6,7 +6,6 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import css from "./App.module.css"
 import Button from './Button/Button'
 import ImageGallery from './ImageGallery/ImageGallery';
-import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
 import Modal from './Modal/Modal';
 import Searchbar from './Searchbar/Searchbar';
 import getImages from '../utils/request';
