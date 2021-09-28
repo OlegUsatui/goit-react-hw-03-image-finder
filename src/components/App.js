@@ -74,9 +74,7 @@ export default class App extends Component {
       <div className={css.App}>
         <Searchbar onSubmit={this.handleFormSubmit} />
         {this.state.reqStatus === "resolved" &&
-          <ImageGallery>
-          <ImageGalleryItem images={this.state.gallery} openModal={this.openModal} page={this.state.page} />
-        </ImageGallery>}
+          <ImageGallery gallery={this.state.gallery} openModal={this.openModal} page={this.state.page} />}
         {this.state.reqStatus === "resolved" && <Button text="Load more" onLoadMoreClick={this.onLoadMoreClick} />}
         {this.state.reqStatus === "pending" && <Loader type="Circles" color="#00BFFF" height={80} width={80} />}
         <ToastContainer autoClose={2000} />
